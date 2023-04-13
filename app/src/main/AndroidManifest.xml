@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_nw"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_nw_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+        <activity android:name="com.depth.notetaker.Edit">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.depth.notetaker.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.depth.notetaker.Detail"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName="com.depth.notetaker.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.depth.notetaker.MainActivity" />
+        </activity>
+        <activity android:name="com.depth.notetaker.AddNote">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.depth.notetaker.MainActivity" />
+        </activity>
+        <activity android:name="com.depth.notetaker.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
